@@ -97,7 +97,11 @@ RUN pip install --no-cache-dir --pre \
     girder-ldap \
     girder-resource-path-tools \
     girder-virtual-folders \
-    girder-xtk-demo
+    girder-xtk-demo \
+    wslink \
+    webpack
+    
+RUN npm i css-loader backbone@1.3.3 ajv@6.9.1
 
 # Build the girder web client
 RUN NPM_CONFIG_FUND=false NPM_CONFIG_AUDIT=false NPM_CONFIG_AUDIT_LEVEL=high NPM_CONFIG_LOGLEVEL=warn NPM_CONFIG_PROGRESS=false NPM_CONFIG_PREFER_OFFLINE=true \
